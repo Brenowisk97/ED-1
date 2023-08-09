@@ -1,0 +1,24 @@
+package main
+
+import ("fmt")
+
+func fibo(n int) int {
+	if n <= 0 {
+		return 0
+	} else if n == 1 {
+		return 1
+	}
+
+	a, b := 1, 1
+	for i := 2; i < n; i++ {
+		a, b = b, a+b
+	}
+
+	return b
+}
+
+func main() {
+	n := 7 // n-ésimo elemento da série de Fibonacci a ser calculado
+	resultado := fibo(n)
+	fmt.Printf("O %d-ésimo elemento da série de Fibonacci é: %d\n", n, resultado)
+}

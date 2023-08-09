@@ -1,0 +1,22 @@
+package main
+
+import ("fmt")
+
+func e_bissexto(ano int) bool {
+	if ano%4 == 0 && (ano%100 != 0 || ano%400 == 0) {
+		return true
+	}
+	return false
+}
+
+func main() {
+	anos := []int{1995, 2012, 1900, 2000}
+
+	for _, ano := range anos {
+		if e_bissexto(ano) {
+			fmt.Printf("%d é um ano bissexto.\n", ano)
+		} else {
+			fmt.Printf("%d não é um ano bissexto.\n", ano)
+		}
+	}
+}
