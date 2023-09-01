@@ -1,12 +1,10 @@
 package main
 
-import (
-	"fmt"
-)
+import ("fmt")
 
 func hanoi(n int, origem, auxiliar, destino string) int {
 	if n == 1 {
-		fmt.Printf("Mova o disco 1 de %s para %s\n", origem, destino)
+		fmt.Printf("Mova o disco 1 de %s para %s\n", origem, destino);
 		return 1
 	}
 
@@ -21,6 +19,6 @@ func hanoi(n int, origem, auxiliar, destino string) int {
 
 func main() {
 	numDiscos := 3
-	movimentos := hanoi(numDiscos, "Torre X", "Torre Y", "Torre Z")
-	fmt.Println("Quantidade de movimentos necessários:", movimentos)
+	movimentos := hanoi(numDiscos, "Torre X", "Torre Y", "Torre Z");
+	fmt.Println("Quantidade de movimentos necessários:", movimentos);
 }
